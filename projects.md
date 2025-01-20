@@ -59,7 +59,7 @@ const form = document.querySelector('form');
 console.log(form);
 
 form.addEventListener('submit', (e) => {
-  //for preventing submitting data to the server
+  <!-- for preventing submitting data to the server -->
   e.preventDefault();
 
   const height = parseInt(document.querySelector('#height').value);
@@ -84,4 +84,20 @@ if(height === '' || height < 0 || isNaN(height)){
 });
 
 
+```
+
+### project 3 --> Digital Clock
+
+```
+ <!-- const clock = document.querySelector('#clock') -->
+const clock = document.getElementById('clock')
+console.log(clock)
+
+
+setInterval( ()=>{
+  let date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString()
+  
+},1000)
 ```
